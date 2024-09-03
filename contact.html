@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Support - Authenticator</title>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navigationbar">
+                <a href="index.html">Back to Home</a>
+            </nav>
+        </header>
+
+        <div class="background"></div>
+
+        <div class="container">
+
+            <div class="content">
+                <h2 class="logo"><i class='bx bxs-layer' ></i>   Contact Our Developer</h2>
+                <div class="text">
+                    <h3>Harsh Parmar</h3>
+                    <p>
+                        Email: pmharsh545@gmail.com
+                    </p>
+                    <p>
+                        M: +1 (647) 832-2785
+                    </p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="form support">
+                    <form action="#">
+                        <h2>Get Help!</h2>
+
+                        <div class="input">
+                            <span class="icon"><i class='bx bx-user'></i></span>
+                            <input type="text" required>
+                            <label>Name</label>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon"><i class='bx bx-envelope'></i></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+
+                        <div class="input">
+                            <span class="icon"><i class='bx bx-phone'></i></span>
+                            <input type="tel" pattern="[0-9]{10}" required>
+                            <label>Contact Number</label>
+                        </div>
+
+                        <div class="input">
+                            <textarea rows="4" required></textarea>
+                            <label>Issue Details</label>
+                        </div>
+
+                        <button type="submit" class="subbtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

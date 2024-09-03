@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+}
+
+body h1 {
+    color: #e4e4e4;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 12.5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navigationbar a {
+    position: relative;
+    font-size: 15px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.navigationbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navigationbar a:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url('/Users/harshparmar/Desktop/Projects/Login-System-FrontEnd/images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(20px);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    background: url('/Users/harshparmar/Desktop/Projects/Login-System-FrontEnd/images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: transparent;
+    padding: 80px;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content .logo {
+    font-size: 30px;
+}
+
+.text p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.social a i {
+    font-size: 25px;
+    color: #e4e4e4;
+    margin-right: 15px;
+    transition: .5s ease;
+}
+
+.social a:hover i {
+    transform: scale(1.5);
+}
+
+.container .box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.box .form {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #e4e4e4;
+}
+
+.box .form.login {
+    transform: translateX(0);
+    transition: transform 1.0s ease;
+    transition-delay: 1.0s;
+}
+
+.box.active .form.login {
+    transform: translateX(450px);
+    transition-delay: 0s;
+}
+
+.box .form.register {
+    transform: translateX(450px);
+    transition: transform 1.0s ease;
+    transition-delay: 0s;
+}
+
+.box.active .form.register {
+    transform: translateX(0);
+    transition-delay: 1.0s;
+}
+
+.form h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.form .input {
+    position: relative;
+    width: 350px;
+    height: 50px;
+    border-bottom: 2px solid #e4e4e4;
+    margin: 30px 0;
+}
+
+.input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding-right: 40px;
+}
+
+.input label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input input:focus~label, .input input:valid~label {
+    top: -5px;
+}
+
+.input .icon {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 25px;
+}
+
+.form .reset {
+    font-size: 15px;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reset label input {
+    accent-color: #e4e4e4;
+    margin-right: 5px;
+
+}
+
+.reset a {
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+.reset a:hover {
+    text-decoration: underline;
+}
+
+.subbtn {
+    width: 100%;
+    height: 40px;
+    background: #c4103d;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #e4e4e4;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgba(150, 150, 150, 0.5);
+}
+
+.form .register {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.register p a {
+    color: #e4e4e4;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+
+/* for contact.html */
+
+.box .form.support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    color: #e4e4e4;
+}
+
+.form .input textarea {
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #e4e4e4;
+    font-weight: 500;
+    padding: 10px;
+    resize: none;
+}
+
+.form .input textarea:focus~label,
+.form .input textarea:valid~label {
+    top: -5px;
+}
